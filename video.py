@@ -8,7 +8,7 @@ FRAME_W = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 FRAME_SIZE = (FRAME_W // NORM * NORM, FRAME_H // NORM * NORM)
 
 app = FaceAnalysis(name=model_name) # 'buffalo_l'
-app.prepare(ctx_id=0, det_thresh=threshold, det_size=FRAME_SIZE) # threshold по-умолчанию 0,5, скорее всего лучше ставить 0,75
+app.prepare(ctx_id=0, det_thresh=threshold, det_size=FRAME_SIZE) # threshold по-умолчанию 0,5, лучше ставить 0,75
 while True:
     ret, frame = cap.read()
     if not ret:
